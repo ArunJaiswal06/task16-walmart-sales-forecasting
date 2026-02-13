@@ -1,0 +1,59 @@
+TASK 16 – WALMART SALES FORECASTING REPORT
+
+Dataset Used:
+Walmart Sales Forecasting Dataset (Kaggle Competition Dataset)
+Total Records: 421,570
+Columns: Store, Dept, Date, Weekly_Sales, IsHoliday
+
+Objective:
+To forecast future weekly sales using time-series forecasting techniques
+for business planning and demand management.
+
+Process Followed:
+
+1. Data Preprocessing:
+   - Converted Date column into datetime format.
+   - Sorted dataset by Date.
+   - Aggregated total Weekly_Sales by Date (company-level sales).
+
+2. Exploratory Analysis:
+   - Plotted weekly sales trend over time.
+   - Observed yearly seasonal patterns.
+   - Used rolling mean to smooth short-term fluctuations.
+
+3. Train-Test Split:
+   - Split data into 80% training and 20% testing.
+   - Time-based split used to preserve chronological order.
+
+4. Model Applied:
+   - Exponential Smoothing (Additive Trend + Additive Seasonality).
+   - Seasonal period set to 52 (weekly data → 52 weeks per year).
+
+5. Forecasting:
+   - Predicted future weekly sales for test period.
+   - Compared predicted values with actual sales.
+
+6. Model Evaluation:
+   - MAE (Mean Absolute Error):1824922.987780064
+   - MAPE (Mean Absolute Percentage Error): 3.9407741270743815 %
+
+Results Interpretation:
+The model successfully captured the overall sales trend and yearly
+seasonality pattern. Forecast accuracy depends on external factors
+such as holidays, economic changes, and sudden market fluctuations.
+
+Business Insight:
+Time-series forecasting helps in:
+- Inventory planning
+- Revenue prediction
+- Staffing optimization
+- Supply chain management
+
+Conclusion:
+Exponential Smoothing is effective for capturing trend and seasonality
+in retail sales data. For higher accuracy, advanced models like ARIMA
+or machine learning-based forecasting can be explored.
+
+Final Outcome:
+Successfully implemented time-series forecasting and evaluated model
+performance using business-relevant metrics (MAE and MAPE).
